@@ -1,0 +1,23 @@
+server:
+  http:
+    host: 0.0.0.0
+    port: 80
+  https:
+    host: 0.0.0.0
+    port: 443
+    cert_file: server.crt
+    key_file: server.key
+
+ats_nodes:
+  - name: ats1
+    domain: 127.0.0.1:8081
+    stats_url: http://127.0.0.1:8081/stats
+    max_conns: 1000
+  - name: ats2
+    domain: 127.0.0.1:8082
+    stats_url: http://127.0.0.1:8082/stats
+    max_conns: 1000
+  - name: ats3
+    domain: 127.0.0.1:8083
+    stats_url: http://127.0.0.1:8083/stats
+    max_conns: 1000
